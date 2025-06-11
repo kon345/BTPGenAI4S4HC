@@ -31,7 +31,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-henrylin0610_studentg20.customermessage": "cds watch --open henrylin0610_studentg20.customermessage/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-henrylin0610_studentg20.customermessage": "cds watch --open henrylin0610_studentg20.customermessage/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-henrylin0610_studentg20.productfaqapp": "cds watch --open henrylin0610_studentg20.productfaqapp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "sql": {
@@ -65,6 +66,7 @@
   },
   "lcap": true,
   "sapux": [
-    "app/henrylin0610_studentg20.customermessage"
+    "app/henrylin0610_studentg20.customermessage",
+    "app/henrylin0610_studentg20.productfaqapp"
   ]
 }

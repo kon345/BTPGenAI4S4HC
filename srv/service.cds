@@ -15,6 +15,15 @@ service henryLin0610_STUDENTG20Srv
             ServiceOrder,
             ServiceOrderDescription
         };
+
+    @odata.draft.enabled
+    entity ProductFAQ as projection on my.ProductFAQ
+    {
+        ID,
+        issue,
+        question,
+        answer
+    };
 }
 
 annotate henryLin0610_STUDENTG20Srv with @requires :

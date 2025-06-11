@@ -27,3 +27,12 @@ entity CustomerMessage : cuid
     suggestedResponseCustomerLanguage : String(5000);
     S4HCP_ServiceOrder : Association to one S4HCP_ServiceOrder_Odata.A_ServiceOrder;
 }
+
+entity ProductFAQ
+{
+ key ID : Integer;
+ issue : LargeString;
+ question : LargeString;
+ answer : LargeString;
+ embedding : Vector(1536);
+}

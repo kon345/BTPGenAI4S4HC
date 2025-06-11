@@ -4,12 +4,17 @@
  */
 const LCAPApplicationService = require('@sap/low-code-event-handler');
 const customermessage_LogicpreprocessMessages = require('./code/customermessage-logicpreprocessMessages');
+const productfaq_Logic_EmbedFAQ = require('./code/productfaq-logic-embedFAQ');
 
 class henryLin0610_STUDENTG20Srv extends LCAPApplicationService {
     async init() {
 
         this.before('READ', 'CustomerMessage', async (request) => {
             await customermessage_LogicpreprocessMessages(request);
+        });
+
+        this.after(['CREATE', 'UPDATE'], 'ProductFAQ', async (results, request) => {
+            await productfaq_Logic_EmbedFAQ(results, request);
         });
 
         return super.init();
